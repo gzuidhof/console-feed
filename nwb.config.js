@@ -1,7 +1,7 @@
 module.exports = {
   type: 'react-component',
   npm: {
-    esModules: false,
+    esModules: true,
     umd: false
   },
   webpack: {
@@ -9,7 +9,10 @@ module.exports = {
       config.entry = {
         demo: ['./demo/src/index.tsx']
       }
-      config.resolve.extensions.push('.ts', '.tsx')
+      config.resolve = {
+        ...config.resolve,
+        extensions: ['.js', '.mjs', '.ts', '.tsx']
+      }
       config.module.rules.push({
         test: /\.tsx?$/,
         loader: 'ts-loader'

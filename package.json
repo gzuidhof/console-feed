@@ -1,11 +1,11 @@
 {
-  "name": "console-feed",
+  "name": "console-feed-modern",
   "version": "3.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "description": "A React component that displays console logs from the current page, an iframe or transported across a server",
   "scripts": {
-    "build": "tsc -p ./tsconfig.build.json --declaration && for file in src/**/*.d.ts; do cp $file ${file/src/lib}; done",
+    "build": "tsc -p ./tsconfig.build.json",
     "clean": "nwb clean-module && nwb clean-demo",
     "start": "nwb serve-react-demo",
     "release": "yarn test && yarn clean && yarn build && yarn publish && yarn clean",
@@ -19,7 +19,7 @@
     "@emotion/styled": "^10.0.12",
     "emotion-theming": "^10.0.10",
     "linkifyjs": "^2.1.6",
-    "react-inspector": "^3.0.2"
+    "react-inspector": "^5.1.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.9",
@@ -32,14 +32,14 @@
     "immutability-helper": "^2.6.6",
     "jest": "^22.4.3",
     "lodash": "^4.17.5",
-    "nwb": "0.21.x",
+    "nwb": "0.25.2",
     "prettier": "^1.13.7",
     "pretty-quick": "^1.6.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "ts-jest": "^22.4.2",
-    "ts-loader": "^3.5.0",
-    "typescript": "3.7"
+    "ts-loader": "^8.0.4",
+    "typescript": "4.0.3"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./scripts/test.js",
@@ -81,14 +81,14 @@
     "ui",
     "view"
   ],
-  "homepage": "https://github.com/samdenty99/console-feed",
+  "homepage": "https://github.com/gzuidhof/console-feed",
   "repository": {
     "type": "git",
-    "url": "https://github.com/samdenty99/console-feed.git"
+    "url": "https://github.com/gzuidhof/console-feed.git"
   },
   "bugs": {
-    "url": "https://github.com/samdenty99/console-feed/issues"
+    "url": "https://github.com/gzuidhof/console-feed/issues"
   },
-  "author": "Sam Denty <samddenty@gmail.com> (http://github.com/samdenty99)",
+  "author": "Sam Denty <samddenty@gmail.com> (http://github.com/samdenty99), fork by Guido Zuidhof <me@guido.io>",
   "license": "MIT"
 }

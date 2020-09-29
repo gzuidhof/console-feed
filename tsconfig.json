@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "outDir": "lib",
-    "module": "commonjs",
-    "target": "es3",
+    "module": "esnext",
+    "target": "esnext",
     "lib": ["es6", "dom"],
     "inlineSourceMap": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "jsx": "react",
     "moduleResolution": "node",
+    "declaration": true,
     "rootDir": ".",
     "forceConsistentCasingInFileNames": true,
     "types": ["jest"]

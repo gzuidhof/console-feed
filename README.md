@@ -1,11 +1,15 @@
 # console-feed
 
 [![npm version](https://img.shields.io/npm/v/console-feed.svg?style=flat-square)](https://www.npmjs.com/package/console-feed)
-[![CircleCI](https://img.shields.io/circleci/project/github/samdenty99/console-feed.svg?style=flat-square)](https://circleci.com/gh/samdenty99/console-feed)
+
+<!-- [![CircleCI](https://img.shields.io/circleci/project/github/gzuidhof/console-feed.svg?style=flat-square)](https://circleci.com/gh/gzuidhof/console-feed) -->
+
 [![npm downloads](https://img.shields.io/npm/dm/console-feed.svg?style=flat-square)](https://www.npmjs.com/package/console-feed)
 [![Demo](https://img.shields.io/badge/CodeSandbox-Demo-yellow.svg?style=flat-square)](https://codesandbox.io/s/rl7pk9w2ym)
 
 A React component that displays console logs from the current page, an iframe or transported across a server.
+
+**This fork, intended for use in [Starboard Notebook](https://github.com/gzuidhof/starboard-notebook) updates the dependencies and removes ES3 transpilation.**
 
 ![Demo](https://user-images.githubusercontent.com/13242392/38513414-1bc32870-3c26-11e8-9a8f-0989d2142b1c.png)
 
@@ -70,26 +74,22 @@ class App extends React.Component {
 OR with hooks:
 
 ```js
-import React, { useState, useEffect } from 'react';
-import { Console, Hook, Unhook } from 'console-feed';
+import React, { useState, useEffect } from 'react'
+import { Console, Hook, Unhook } from 'console-feed'
 
 const LogsContainer = () => {
-  const [logs, setLogs] = useState([]);
+  const [logs, setLogs] = useState([])
 
   // run once!
   useEffect(() => {
-    Hook(
-      window.console,
-      (log) => setLogs((currLogs) => [...currLogs, log]),
-      false
-    );
-    return () => Unhook(window.console);
-  }, []);
+    Hook(window.console, log => setLogs(currLogs => [...currLogs, log]), false)
+    return () => Unhook(window.console)
+  }, [])
 
-  return <Console logs={logs} variant="dark" />;
-};
+  return <Console logs={logs} variant="dark" />
+}
 
-export { LogsContainer };
+export { LogsContainer }
 ```
 
 ## Props for `<Console />` component

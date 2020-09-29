@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    Hook(iframe.contentWindow.console, log => {
+    Hook((iframe.contentWindow as any).console, log => {
       const decoded = Decode(log)
       this.setState(state => update(state, { logs: { $push: [decoded] } }))
     })
