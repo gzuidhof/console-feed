@@ -3,6 +3,7 @@
   "version": "3.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "module": "lib/index.js",
   "description": "A React component that displays console logs from the current page, an iframe or transported across a server",
   "scripts": {
     "build": "tsc -p ./tsconfig.build.json",
