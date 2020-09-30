@@ -64,6 +64,16 @@ class CustomInspector extends React.PureComponent<Props, any> {
     const { styles } = this.props.theme
     const constructor = data && data.constructor ? data.constructor.name : null
 
+    if (data && data['$$'] !== undefined && data['$$']['type'] === 'PyProxy') {
+      return (
+        <span style={{ fontStyle: 'italic' }}>
+          PyProxy {`{`}
+          <span style={{ color: 'rgb(79, 186, 240)' }}>{data.toString()}</span>
+          {`}`}
+        </span>
+      )
+    }
+
     if (constructor === 'Function')
       return (
         <span style={{ fontStyle: 'italic' }}>
