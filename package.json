@@ -1,6 +1,6 @@
 {
   "name": "console-feed-modern",
-  "version": "3.0.3",
+  "version": "3.0.5",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.js",

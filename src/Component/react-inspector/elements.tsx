@@ -6,10 +6,11 @@ import styled from '../theme'
 export const Root = styled('div')({
   display: 'inline-block',
   wordBreak: 'break-all',
-  '&::after': {
-    content: `' '`,
-    display: 'inline-block'
-  },
+  // Note(gzuidhof): Commented to remove empty line after console output.
+  // '&::after': {
+  //   content: `' '`,
+  //   display: 'inline-block'
+  // },
   '& > li': {
     backgroundColor: 'transparent !important',
     display: 'inline-block'

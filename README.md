@@ -9,7 +9,13 @@
 
 A React component that displays console logs from the current page, an iframe or transported across a server.
 
-**This fork, intended for use in [Starboard Notebook](https://github.com/gzuidhof/starboard-notebook) updates the dependencies and removes ES3 transpilation.**
+**Main changes in this fork, intended for use in [Starboard Notebook](https://github.com/gzuidhof/starboard-notebook)**:
+
+- Updates dependencies.
+- Removes ES3 transpilation, instead it outputs ES Next allowing you to do transpilation yourself.
+- Support for PyProxy printing (Pyodide specific)
+- Custom formatter for Module "objects" (= the result of dynamic ESM imports).
+- Minor CSS tweak removing additional line after some types of outputs.
 
 ![Demo](https://user-images.githubusercontent.com/13242392/38513414-1bc32870-3c26-11e8-9a8f-0989d2142b1c.png)
 
