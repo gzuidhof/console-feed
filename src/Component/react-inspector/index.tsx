@@ -74,6 +74,14 @@ class CustomInspector extends React.PureComponent<Props, any> {
       )
     }
 
+    if (data && data[Symbol.toStringTag] === 'Module') {
+      return (
+        <span style={{ fontStyle: 'italic' }}>
+          Module <ObjectPreview data={data} />
+        </span>
+      )
+    }
+
     if (constructor === 'Function')
       return (
         <span style={{ fontStyle: 'italic' }}>
